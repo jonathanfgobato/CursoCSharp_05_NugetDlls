@@ -1,0 +1,40 @@
+Anotações cursos DLLs, documentção e Nuget
+
+Internal - Indica que uma classe só pode ser acessada de dentro do mesmo projeto,
+similar ao package do Java
+
+Internal protected - Para herdar de uma classe interna
+
+
+GAC - Global Assembly Cache - Diretorio onde é registrado no sistema as dlls para serem usadas
+
+Criar um projeto das classes que são comuns entre projetos, exemplo
+	> DAO
+	> Models
+e referenciar esses projetos(Class Library)
+
+
+Para gerar documentação a partir dos comentarios inseridos na classe, é necessário ativar nas propriedades
+do projeto, em build, output path e generate documentation...
+
+É recomendado criar documentação dos membros publicos da classe
+
+Documentação da biblioteca
+
+	/// <summary>
+	/// Definição da classe, metodo, etc
+	/// </summary>
+
+Documentacao para metodos
+        /// <summary>
+        /// Cria uma instância de ContaCorrente
+        /// </summary>
+        /// <param name="agencia">Representa o valor da propriedade <see cref="Agencia"/> e deve possuir um valor positivo</param>
+        /// <param name="numero">Representa o valor da propriedade <see cref="Numero"/> e deve possuir um valor positivo</param>
+
+Documentação de exceções
+
+        /// <param name="agencia">Representa o valor da propriedade <see cref="Agencia"/> e deve possuir um valor positivo</param>
+        /// <param name="numero">Representa o valor da propriedade <see cref="Numero"/> e deve possuir um valor positivo</param>
+
+Humanizer - Biblioteca utilizada para tradução de datas TimeSpan
